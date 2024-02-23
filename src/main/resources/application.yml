@@ -10,6 +10,10 @@ eureka:
   instance:
     preferIpAddress: false
     hostname: ${HOSTNAME:localhost}
+    non-secure-port-enabled: false
+		secure-port-enabled: true
+		non-secure-port: ${server.port}
+		secure-port: 443
     
 spring:
   application:
