@@ -1,4 +1,4 @@
-##config ms prducts
+##config ms prducts trr
 ## Configuration for Eureka
 eureka:
   client:
