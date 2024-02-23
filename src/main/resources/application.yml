@@ -1,0 +1,37 @@
+## Configuration for Eureka
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    service-url:
+      defaultZone: ${EUREKA_URL:http://localhost:8761/eureka}
+      
+  instance:
+    preferIpAddress: false
+    hostname: ${HOSTNAME:localhost}
+    
+spring:
+  application:
+    name: ms-store-products
+
+## Instance port
+server:
+  port: ${PORT:8088}
+
+##Elasticsearch config
+elasticsearch:
+  host: ${ELASTICSEARCH_HOST}
+  credentials:
+    user: ${ELASTICSEARCH_USER}
+    password: ${ELASTICSEARCH_PWD}
+logging:
+  level:
+    tracer: TRACE
+    
+##swagger
+springdoc:
+  api-docs:
+    enabled: 'true'
+  swagger-ui:
+    enabled: 'true'
+    path: /doc/swagger-ui.html
